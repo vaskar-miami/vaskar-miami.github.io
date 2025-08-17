@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Enhancing Urban Accessibility Mapping with Multimodal AI</title>
+      <meta
+        name="description"
+        content="Exploring multimodal large language models with geospatial imagery for accessible urban navigation."
+      />
+      <link rel="stylesheet" href="./styles/project_styles.css" />
+    </div>
+
+    <div class="container">
+      <!-- Back Button -->
+      <div class="back-button-container">
+        <button class="back-button" onclick="window.history.back()">
+          ← Back
+        </button>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <img
+          src="./assets/image/hero-urban-mapping.png"
+          alt="AI-powered urban accessibility mapping"
+          class="hero-image"
+        />
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badges">
+              <span class="badge badge-blue">Accessibility</span>
+              <span class="badge badge-green">Multimodal AI</span>
+              <span class="badge badge-cyan">Urban Mapping</span>
+            </div>
+            <h1 class="hero-title">
+              Enhancing Urban Accessibility Mapping with Multimodal LLMs
+            </h1>
+            <p class="hero-subtitle" style="color: black">
+              Leveraging geospatial imagery and large language models to detect
+              wheelchair-accessible features such as crosswalks, ramps, and curb
+              cuts.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      <article class="article">
+        <!-- Introduction -->
+        <section class="section">
+          <h2 class="section-title">Introduction</h2>
+          <p>
+            Navigating cities remains difficult for wheelchair users due to
+            incomplete or outdated accessibility information. Our work
+            introduces a multimodal AI system that integrates high-resolution
+            geospatial imagery with large language models to classify
+            accessibility features like crosswalks and ramps. These features are
+            then added to
+            <a
+              href="https://www.openstreetmap.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >OpenStreetMap</a
+            >
+            to support accessible routing algorithms.
+          </p>
+        </section>
+
+        <!-- Related Work -->
+        <section class="section">
+          <h2 class="section-title">Related Work</h2>
+          <div class="card">
+            <p>
+              Prior research explored satellite and aerial imagery for detecting
+              pedestrian infrastructure, YOLO-based models for crosswalk
+              detection, and GIS-based frameworks for accessibility analysis.
+              However, most approaches rely heavily on large labeled datasets,
+              which are time-consuming to obtain and limited in scalability
+              across different regions.
+            </p>
+          </div>
+        </section>
+
+        <!-- Methods -->
+        <section class="section">
+          <h2 class="section-title">Methods</h2>
+
+          <div class="grid">
+            <div class="card">
+              <h3 class="card-title">Overview</h3>
+              <p>
+                We focused on crosswalk detection as a case study. The system
+                employs both zero-shot and few-shot classification using
+                multimodal LLMs, enabling generalization to future tasks such as
+                detecting ramps, stairs, and tactile paving.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Data Collection</h3>
+              <p>
+                High-resolution imagery was obtained from the USGS and paired
+                with OpenStreetMap vector data. Images (5000×5000 pixels) were
+                divided into smaller 256×256 patches to facilitate training and
+                evaluation.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Data Preprocessing</h3>
+              <ul>
+                <li>Plain Dataset: raw satellite imagery</li>
+                <li>Overlaid Dataset: OSM road network overlaid on imagery</li>
+                <li>
+                  Blurred Dataset: Gaussian blur applied to non-essential
+                  regions
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Prompt Engineering</h3>
+              <p>
+                Prompts were iteratively refined to guide the models. Early
+                prompts used simple descriptions, while later refinements
+                specified intersection locations, stripe patterns, and visual
+                cues. Chain-of-thought prompting improved interpretability and
+                accuracy.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results -->
+        <section class="section">
+          <h2 class="section-title">Experimental Evaluation</h2>
+          <p>
+            The system was evaluated across multiple preprocessing techniques.
+            Accuracy reached
+            <strong>99.01% in few-shot settings</strong> and
+            <strong>97.5% in zero-shot</strong>, outperforming baseline methods
+            like ProtoNet and SimpleShot.
+          </p>
+          <img
+            src="./assets/image/FSLabeling.png"
+            alt="Performance metrics across datasets"
+            class="section-image"
+            style="margin-top: 15px"
+          />
+        </section>
+
+        <!-- Insights -->
+        <section class="section">
+          <h2 class="section-title">Key Insights</h2>
+          <div class="card">
+            <p>
+              Raw imagery exposed challenges like shadows and ambiguous
+              patterns. Overlaid datasets improved accuracy by integrating
+              spatial and visual data, while blurred datasets provided the best
+              performance by emphasizing crosswalk features and reducing
+              distractions.
+            </p>
+          </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+          <h2 class="section-title">Conclusion & Future Work</h2>
+          <p>
+            Our study demonstrates the effectiveness of multimodal AI for
+            accessibility mapping. Future work will expand detection to ramps,
+            tactile paving, and sidewalks across diverse regions. Real-time
+            feedback and fine-tuned multimodal models will enhance system
+            adaptability, supporting inclusive urban navigation.
+          </p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

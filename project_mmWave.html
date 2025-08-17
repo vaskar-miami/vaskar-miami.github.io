@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+        mmWave Camera Fusion Based Object Detection in Autonomous Driving
+      </title>
+      <meta
+        name="description"
+        content="Exploring the cutting-edge integration of millimeter-wave radar and computer vision technologies for enhanced object detection and safety in autonomous vehicles."
+      />
+      <link rel="stylesheet" href="./styles/project_styles.css" />
+    </div>
+
+    <div class="container">
+      <!-- Back Button -->
+      <div class="back-button-container">
+        <button class="back-button" onclick="window.history.back()">
+          ← Back
+        </button>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <img
+          src="./assets/image/hero-autonomous-driving.jpg"
+          alt="Autonomous vehicle technology with sensor arrays"
+          class="hero-image"
+        />
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badges">
+              <span class="badge badge-blue">Autonomous Driving</span>
+              <span class="badge badge-green">Sensor Fusion</span>
+              <span class="badge badge-cyan">Computer Vision</span>
+            </div>
+            <h1 class="hero-title">
+              mmWave-Camera Fusion Based Localization and Mapping in Autonomous
+              Driving
+            </h1>
+            <p class="hero-subtitle">
+              Exploring the cutting-edge integration of millimeter-wave radar
+              and computer vision technologies for enhanced object detection and
+              safety in autonomous vehicles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      <article class="article">
+        <!-- Introduction -->
+        <div class="intro">
+          <p class="intro-text">
+            The future of autonomous driving relies heavily on the ability to
+            accurately detect and track objects in real-time. This comprehensive
+            analysis explores how the fusion of millimeter-wave (mmWave) radar
+            technology with traditional camera systems creates a robust and
+            reliable object detection framework that significantly enhances
+            vehicle safety and navigation capabilities.
+          </p>
+        </div>
+
+        <!-- Technology Overview Section -->
+        <section class="section">
+          <h2 class="section-title">Technology Overview</h2>
+
+          <div class="card tech-card">
+            <h3 class="card-title">What is mmWave Technology?</h3>
+            <p class="card-text">
+              Millimeter-wave technology operates in the frequency range of
+              30-300 GHz, providing high-resolution radar capabilities that can
+              penetrate adverse weather conditions. Unlike traditional sensors,
+              mmWave radar offers exceptional range, velocity, and angle
+              measurements with minimal interference from environmental factors.
+            </p>
+            <ul class="tech-list">
+              <li>Frequency range: 76-81 GHz for automotive applications</li>
+              <li>Detection range: Up to 300 meters</li>
+              <li>Angular resolution: Sub-degree precision</li>
+              <li>Weather independence: Functions in rain, fog, and snow</li>
+            </ul>
+          </div>
+
+          <img
+            src="./assets/image/mmwave-fusion-diagram.png"
+            alt="mmWave radar fusion with camera technology diagram"
+            class="section-image"
+          />
+
+          <p class="section-text">
+            Our system collects data using a custom 3D-printed enclosure that
+            integrates mmWave sensors with camera fusion technology, mounted on
+            a scooter for mobility. This platform, developed by the
+            <a
+              href="https://scooterlab.utsa.edu/index"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Scooter Lab</a
+            >, enables efficient data collection in real-world environments. In
+            collaboration with the lab, we are leveraging this system to advance
+            sidewalk-based autonomous driving and high-precision mapping.
+          </p>
+        </section>
+
+        <!-- Sensor Fusion Architecture -->
+        <section class="section">
+          <h2 class="section-title">Sensor Fusion Architecture</h2>
+
+          <div class="grid">
+            <div class="card">
+              <h3 class="card-title-blue">Camera System Benefits</h3>
+              <ul class="benefit-list">
+                <li>High-resolution visual data</li>
+                <li>Color and texture recognition</li>
+                <li>Traffic sign interpretation</li>
+                <li>Lane marking detection</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title-green">mmWave Radar Advantages</h3>
+              <ul class="benefit-list">
+                <li>All-weather operation</li>
+                <li>Precise distance measurement</li>
+                <li>Velocity detection</li>
+                <li>Penetration through obstacles</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="section-text">
+            The fusion architecture combines the strengths of both technologies
+            through advanced algorithms that process and correlate data streams
+            in real-time. This multi-modal approach significantly reduces false
+            positives and negatives while providing redundancy for critical
+            safety systems.
+          </p>
+        </section>
+
+        <!-- Object Detection Pipeline -->
+        <section class="section">
+          <h2 class="section-title">Object Detection Pipeline</h2>
+
+          <div class="pipeline-container">
+            <h3 class="pipeline-title">Multi-Stage Processing</h3>
+            <div class="pipeline-steps">
+              <div class="step">
+                <div class="step-number step-blue">1</div>
+                <div class="step-content">
+                  <h4 class="step-title">Data Acquisition</h4>
+                  <p class="step-description">
+                    Simultaneous capture from camera and mmWave sensors
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number step-cyan">2</div>
+                <div class="step-content">
+                  <h4 class="step-title">Preprocessing</h4>
+                  <p class="step-description">
+                    Noise reduction, calibration, and temporal alignment
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number step-green">3</div>
+                <div class="step-content">
+                  <h4 class="step-title">Feature Extraction</h4>
+                  <p class="step-description">
+                    AI-powered analysis of visual and radar signatures
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number step-blue">4</div>
+                <div class="step-content">
+                  <h4 class="step-title">Fusion & Classification</h4>
+                  <p class="step-description">
+                    Combined analysis for accurate object identification
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="./assets/image/vehicle-interior-sensors.jpg"
+            alt="Vehicle interior showing multiple sensor feeds and displays"
+            class="section-image"
+          />
+        </section>
+
+        <!-- Performance Metrics -->
+        <section class="section">
+          <h2 class="section-title">Expected Performance Metrics</h2>
+
+          <div class="metrics-grid">
+            <div class="metric-card metric-blue">
+              <div class="metric-value">90% +</div>
+              <div class="metric-label">Detection Accuracy</div>
+            </div>
+            <div class="metric-card metric-cyan">
+              <div class="metric-value">15ms</div>
+              <div class="metric-label">Processing Latency</div>
+            </div>
+            <div class="metric-card metric-green">
+              <div class="metric-value">300m</div>
+              <div class="metric-label">Detection Range</div>
+            </div>
+          </div>
+
+          <p class="section-text">
+            Real-world testing demonstrates significant improvements in object
+            detection reliability compared to single-sensor systems. The fusion
+            approach achieves industry-leading performance metrics while
+            maintaining computational efficiency suitable for real-time
+            applications.
+          </p>
+        </section>
+
+        <!-- Challenges and Solutions -->
+        <section class="section">
+          <h2 class="section-title">Challenges and Solutions</h2>
+
+          <div class="challenges">
+            <div class="card challenge-red">
+              <h3 class="challenge-title">Data Synchronization</h3>
+              <p class="challenge-text">
+                Ensuring temporal alignment between different sensor modalities
+                requires sophisticated buffering and interpolation techniques.
+                Our solution implements hardware-level timestamping and
+                predictive algorithms to maintain sub-millisecond
+                synchronization.
+              </p>
+            </div>
+
+
+          <div class="challenges">
+            <div class="card challenge-red">
+              <h3 class="challenge-title">Camera mmWave Radar Calibration</h3>
+              <p class="challenge-text">
+                Achieving accurate calibration between camera and radar sensors requires careful computation of intrinsic and extrinsic parameters. 
+                  Our solution applies intrinsic matrix calibration to correct for lens distortions and establish precise camera geometry, 
+                  while the extrinsic matrix defines the spatial transformation between the camera and radar coordinate frames. 
+                  This ensures accurate sensor fusion for reliable perception and mapping.
+              </p>
+            </div>
+
+            <div class="card challenge-green">
+              <h3 class="challenge-title">Computational Complexity</h3>
+              <p class="challenge-text">
+                Processing multiple high-bandwidth data streams demands
+                optimized algorithms and specialized hardware. Edge computing
+                units with dedicated AI accelerators enable real-time fusion
+                processing without compromising vehicle performance.
+              </p>
+            </div>
+
+            <div class="card challenge-blue">
+              <h3 class="challenge-title">Environmental Adaptation</h3>
+              <p class="challenge-text">
+                Varying lighting conditions and weather patterns require
+                adaptive algorithms that can dynamically adjust fusion weights
+                and parameters. Machine learning models continuously optimize
+                performance based on environmental context.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Future Directions -->
+        <section class="section">
+          <h2 class="section-title">Future Directions</h2>
+
+          <div class="future-container">
+            <p class="future-text">
+              The next generation of autonomous driving systems will integrate
+              additional sensor modalities including LiDAR, thermal imaging, and
+              advanced AI processing capabilities. Research continues into
+              neural network architectures specifically designed for multi-modal
+              sensor fusion.
+            </p>
+
+            <h3 class="future-subtitle">Emerging Technologies</h3>
+            <ul class="future-list">
+              <li>4D imaging radar with enhanced resolution</li>
+              <li>AI-powered predictive object tracking</li>
+              <li>Vehicle-to-everything (V2X) communication integration</li>
+              <li>Quantum sensing for ultra-precise measurements</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+          <h2 class="section-title">Conclusion</h2>
+          <div class="conclusion">
+            <p class="conclusion-text">
+              mmWave camera fusion represents a critical milestone in autonomous
+              driving technology. By combining the complementary strengths of
+              radar and vision systems, we achieve unprecedented levels of
+              safety and reliability. As the technology continues to evolve, we
+              can expect even more sophisticated integration techniques that
+              will bring us closer to fully autonomous transportation.
+            </p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

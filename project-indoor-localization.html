@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Indoor Navigation and Mapping with mmWave Sensing</title>
+      <meta
+        name="description"
+        content="Using mmWave sensing for indoor mapping and localization to support accessible navigation."
+      />
+      <link rel="stylesheet" href="./styles/project_styles.css" />
+    </div>
+
+    <div class="container">
+      <!-- Back Button -->
+      <div class="back-button-container">
+        <button class="back-button" onclick="window.history.back()">
+          ← Back
+        </button>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <img
+          src="./assets/image/hero-indoor.jpg"
+          alt="Indoor mmWave mapping and navigation"
+          class="hero-image"
+        />
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badges">
+              <span class="badge badge-blue">mmWave</span>
+              <span class="badge badge-green">Indoor Mapping</span>
+              <span class="badge badge-cyan">Navigation</span>
+            </div>
+            <h1 class="hero-title">
+              Indoor Navigation and Mapping with mmWave Sensing
+            </h1>
+            <p class="hero-subtitle" style="color: black">
+              Leveraging mmWave localization and sensing to build indoor maps
+              and enable navigation in grocery stores, malls, and other complex
+              indoor spaces.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      <article class="article">
+        <!-- Introduction -->
+        <section class="section">
+          <h2 class="section-title">Introduction</h2>
+          <p>
+            Indoor navigation remains a challenge due to GPS limitations and
+            complex building layouts. Our system uses mmWave radar sensing to
+            create high-resolution indoor maps and localize users. These maps
+            support real-time navigation and accessibility guidance within
+            grocery stores, shopping malls, and other indoor environments.
+          </p>
+        </section>
+
+        <!-- Related Work -->
+        <section class="section">
+          <h2 class="section-title">Related Work</h2>
+          <div class="card">
+            <p>
+              Previous studies explored Wi-Fi and Bluetooth-based indoor
+              positioning, LiDAR for mapping, and computer vision for obstacle
+              detection. mmWave sensing offers high-resolution depth and
+              localization capabilities, with robustness to lighting and
+              clutter, making it suitable for dense indoor environments.
+            </p>
+          </div>
+        </section>
+
+        <!-- Methods -->
+        <section class="section">
+          <h2 class="section-title">Methods</h2>
+
+          <div class="grid">
+            <div class="card">
+              <h3 class="card-title">System Overview</h3>
+              <p>
+                The system combines mmWave radar data with floor plan priors and
+                sensor fusion to generate 3D indoor maps. Real-time localization
+                is achieved through signal reflections and path tracking,
+                enabling user guidance to target locations like aisles or
+                checkout counters.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Data Collection</h3>
+              <p>
+                mmWave radar scans were collected across multiple indoor spaces,
+                covering open areas and cluttered aisles. The dataset includes
+                reflection intensity, angle-of-arrival, and time-of-flight
+                measurements for robust mapping and localization.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Data Processing</h3>
+              <ul>
+                <li>Raw mmWave scans for 3D point cloud generation</li>
+                <li>Filtered datasets to remove noise and dynamic objects</li>
+                <li>Overlayed datasets combined with building floor plans</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Navigation and Guidance</h3>
+              <p>
+                The system calculates optimal routes indoors using real-time
+                localization. Accessibility features like ramps, wide aisles,
+                and elevators are integrated into navigation paths for
+                wheelchair users and mobility-impaired individuals.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results -->
+        <section class="section">
+          <h2 class="section-title">Experimental Evaluation</h2>
+          <p>
+            Evaluation across multiple indoor spaces showed high localization
+            accuracy, with an average error of <strong>15 cm</strong>. Route
+            guidance was successfully provided in dense aisle environments and
+            around obstacles.
+          </p>
+          <!-- <img
+            src="./assets/image/mmwave-results.png"
+            alt="Performance metrics across indoor scenarios"
+            class="section-image"
+            style="margin-top: 15px"
+          /> -->
+        </section>
+
+        <!-- Insights -->
+        <section class="section">
+          <h2 class="section-title">Key Insights</h2>
+          <div class="card">
+            <p>
+              mmWave mapping is robust to lighting conditions and works in
+              cluttered spaces where cameras or LiDAR might fail. Integration
+              with floor plans improves navigation accuracy, while real-time
+              updates allow the system to adapt to changing indoor layouts.
+            </p>
+          </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+          <h2 class="section-title">Conclusion & Future Work</h2>
+          <p>
+            Our study demonstrates the potential of mmWave sensing for indoor
+            mapping and navigation. Future work will include integration with
+            mobile devices, enhanced real-time user guidance, and expanded
+            datasets covering diverse indoor environments like airports and
+            hospitals.
+          </p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

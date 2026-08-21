@@ -42,6 +42,46 @@
     .contact li, .past li {
       margin-bottom: 0.5rem;
     }
+    /* Layout: main + right sidebar for Recent News */
+    .container {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+    .main {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .sidebar {
+      width: 300px;
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+    }
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+    .news-tag {
+      display: inline-block;
+      background: #007acc;
+      color: #fff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .news-item h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1rem;
+    }
+    @media (max-width: 800px) {
+      .container { flex-direction: column; }
+      .sidebar { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -66,15 +106,17 @@
     <a href="cv-long.pdf">Full CV</a>
   </nav>
 
-  <section class="contact">
+  <div class="container">
+    <div class="main">
+      <section class="contact">
     <h2>Contact</h2>
     <ul>
       <li>Tel: (+1) 513-529-0845 (Office)</li>
       <li>Email: raychov [at] miamioh [dot] edu</li>
     </ul>
-  </section>
+      </section>
 
-  <section class="past">
+      <section class="past">
     <h2>Past</h2>
     <ul>
       <li>PhD, Computing @ HK PolyU, 2010</li>
@@ -84,14 +126,25 @@
       <li>Guest Prof. @ U. Mannheim, 2016-17</li>
       <li>Associate Prof. @ MiamiU-OH, since 2018</li>
     </ul>
-  </section>
-  <div style="text-align: center; margin-top: 30px;">
+      </section>
+
+      <div style="text-align: center; margin-top: 30px;">
         <a href="http://www.hitwebcounter.com" target="_blank">
           <img alt="Page Views" title="Page Views"
                src="http://hitwebcounter.com/counter/counter.php?page=6905640&style=0025&nbdigits=5&type=page&initCount=160000" 
                border="0">
         </a>
       </div>
-      
+    </div>
+
+    <aside class="sidebar">
+      <h2>Recent News</h2>
+      <div class="news-item">
+        <div class="news-tag">New paper accepted</div>
+        <p class="ieee-citation">N. Emmert, D. H. Scott, J. Sanuk, R. Hardek, N. Mahmud, and V. Raychoudhury, "RESA: A Radar-Exclusive Spatial Assistant for Indoor mmWave Wheelchair Guidance," Proc. IEEE 23rd Int. Conf. Mobile Ad Hoc and Smart Systems (MASS), 2026. Acceptance rate: 29.7%.</p>
+      </div>
+    </aside>
+  </div>
+
 </body>
 </html>
